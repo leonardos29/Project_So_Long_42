@@ -15,18 +15,20 @@ The project covers **map validation**, **pathfinding with DFS**, **graphic rende
 ---
 
 ## 🔨 Compilation  
-```bash
+
 make
 
 -This will generate the so_long executable.
 
-## Clean object files:
+##Clean object files:
 make clean
 
 Full cleanup:
 make fclean
 
-▶️ Run the Game
+---
+
+## ▶️ Run the Game
 ./so_long maps/map.ber
 
 map.ber is a text file that represents the map (walls, floor, collectibles, exit, and player).
@@ -37,8 +39,8 @@ Example map:
 100001
 1C0E01
 111111
-
-🎮 Controls
+---
+##🎮 Controls
 
 W / ↑ → Move Up
 
@@ -52,7 +54,9 @@ ESC → Quit
 
 Goal: Collect all spell books 📚 and reach the exit 🚪.
 
-📂 Project Structure
+---
+
+##📂 Project Structure
 
 ├── assets/        # XPM sprites (wall, floor, player, collectibles, exit)
 ├── maps/          # Example maps
@@ -61,8 +65,12 @@ Goal: Collect all spell books 📚 and reach the exit 🚪.
 ├── Makefile
 └── README.md
 
-📸 Screenshots
+---
 
-📜 License
+##📸 Screenshots
+
+---
+
+##📜 License
 
 This project is part of the 42 curriculum and is for educational purposes only.
