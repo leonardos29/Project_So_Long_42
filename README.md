@@ -76,6 +76,8 @@ Goal: Collect all spell books 📚 and reach the exit 🚪.
 ---
 
 ## 📸 Screenshots
+![Game Start](assets/screenshots/foto1.png)
+![In-game Example](assets/screenshots/foto2.png)
 
 ---
 
