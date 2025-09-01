@@ -20,7 +20,7 @@ make
 
 -This will generate the so_long executable.
 
-##Clean object files:
+# Clean object files:
 make clean
 
 Full cleanup:
@@ -29,6 +29,8 @@ make fclean
 ---
 
 ## ▶️ Run the Game
+```bash
+
 ./so_long maps/map.ber
 
 map.ber is a text file that represents the map (walls, floor, collectibles, exit, and player).
@@ -39,8 +41,13 @@ Example map:
 100001
 1C0E01
 111111
+
+```
 ---
-##🎮 Controls
+
+```bash
+
+## 🎮 Controls
 
 W / ↑ → Move Up
 
@@ -54,9 +61,11 @@ ESC → Quit
 
 Goal: Collect all spell books 📚 and reach the exit 🚪.
 
+```
 ---
 
-##📂 Project Structure
+```bash
+## 📂 Project Structure
 
 ├── assets/        # XPM sprites (wall, floor, player, collectibles, exit)
 ├── maps/          # Example maps
@@ -64,13 +73,13 @@ Goal: Collect all spell books 📚 and reach the exit 🚪.
 ├── include/       # Header files
 ├── Makefile
 └── README.md
+```
+---
+
+## 📸 Screenshots
 
 ---
 
-##📸 Screenshots
-
----
-
-##📜 License
+## 📜 License
 
 This project is part of the 42 curriculum and is for educational purposes only.
