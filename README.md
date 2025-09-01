@@ -45,10 +45,8 @@ Example map:
 ```
 ---
 
-```bash
-
 ## 🎮 Controls
-
+```bash
 W / ↑ → Move Up
 
 S / ↓ → Move Down
@@ -64,8 +62,9 @@ Goal: Collect all spell books 📚 and reach the exit 🚪.
 ```
 ---
 
-```bash
 ## 📂 Project Structure
+
+```bash
 
 ├── assets/        # XPM sprites (wall, floor, player, collectibles, exit)
 ├── maps/          # Example maps
