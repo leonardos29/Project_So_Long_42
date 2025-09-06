@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   put_moves_on_screen.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leonardo_ouza <leonardo_ouza@student.42    +#+  +:+       +#+        */
+/*   By: leonasil <leonasil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 06:18:40 by leonardo_ou       #+#    #+#             */
-/*   Updated: 2025/09/06 06:29:53 by leonardo_ou      ###   ########.fr       */
+/*   Updated: 2025/09/06 08:36:50 by leonasil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 void	put_moves_on_screen(t_game_data *data)
 {
 	char	*moves_str;
-	char 	*display_str;
-	
+	char	*display_str;
+
 	moves_str = ft_itoa(data->moves);
-	display_str = ft_strjoin("Moves: ", moves_str)
-	mlx_string_put(data->mlx, data->win, 12, 15, 0xFFFFFF, moves_str);
+	display_str = ft_strjoin("Moves: ", moves_str);
+	mlx_string_put(data->mlx, data->win, 12, 15, 0xFFFFFF, display_str);
 	free(moves_str);
+	free(display_str);
 }

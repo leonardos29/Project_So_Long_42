@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leonardo_ouza <leonardo_ouza@student.42    +#+  +:+       +#+        */
+/*   By: leonasil <leonasil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 04:29:28 by leonardo_ou       #+#    #+#             */
-/*   Updated: 2025/09/06 06:08:21 by leonardo_ou      ###   ########.fr       */
+/*   Updated: 2025/09/06 08:34:43 by leonasil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
