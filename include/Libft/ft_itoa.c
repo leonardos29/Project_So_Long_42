@@ -6,7 +6,7 @@
 /*   By: leonardo_ouza <leonardo_ouza@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 20:08:33 by leonasil          #+#    #+#             */
-/*   Updated: 2025/04/28 01:25:15 by leonardo_ou      ###   ########.fr       */
+/*   Updated: 2025/09/06 06:19:52 by leonardo_ou      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,3 @@ char	*ft_itoa(int n)
 	int_to_str(s, s_len, ln);
 	return (s);
 }
-/*
-int main()
-{
-	char	*str = ft_itoa(-35);
-    printf("%s \n",str);
-	free(str);
-}
-*/

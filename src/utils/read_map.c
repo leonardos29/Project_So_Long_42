@@ -1,48 +1,73 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read_map.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: leonardo_ouza <leonardo_ouza@student.42    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/06 05:53:01 by leonardo_ou       #+#    #+#             */
+/*   Updated: 2025/09/06 05:55:03 by leonardo_ou      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/so_long.h"
 
-void read_map(char *name, t_game_data *data)
+void	count_height_map(t_game_data *data, char *name)
 {
-    int fd;
-    int i;
-    char *line;
+	int		fd;
+	char	*line;
 
-    fd = open(name,O_RDONLY);
-    if(fd < 0)
-        {
-            ft_printf("Error:Cannot open the file!\n");
-            exit(1);
-        }
-    data -> map_h = 0;
-    while((line = get_next_line(fd)))
-    {
-        if(line[0] == '\n')
-            ft_printf("Map error: remove new line!\n");
-        // Precisa dar free na line (criar funcao para isso)
-        data -> map_h++;
-        free(line);
-    } 
-    close(fd);
-    data -> map = malloc(sizeof(char*) * (data -> map_h + 1));
-    if(!data -> map)
-        {
-            ft_printf("Error: error to allocate using malloc!\n");
-            exit(1);
-        }
-    fd = open(name,O_RDONLY);
-    if(fd < 0)
-        {
-            ft_printf("Error:Cannot reopen the file!\n");
-            exit(1);
-        }
-    i = 0;
-    while ((line = get_next_line(fd)))
+	fd = open(name, O_RDONLY);
+	if (fd < 0)
+		error(NULL, "Error: Cannot open the file!");
+	data->map_h = 0;
+	line = get_next_line(fd);
+	while (line)
 	{
-		data-> map[i] = ft_strtrim(line, "\n");
+		if (line[0] == '\n')
+		{
+			free(line);
+			error(NULL, "Map error: remove new line!");
+		}
+		data->map_h++;
 		free(line);
-		i++;
+		line = get_next_line(fd);
 	}
-    data -> map[i] = NULL;
-    close(fd);
-    ft_printf("Matriz do mapa criado\n");
-    ft_printf("Altura do mapa: %d\n", data -> map_h);
+	close(fd);
+}
+
+void	construct_map(t_game_data *data, char *name)
+{
+	int		fd;
+	char	*line;
+	int		i;
+
+	fd = open(name, O_RDONLY);
+	if (fd < 0)
+		error(data, "Error: Cannot reopen the file!");
+	i = 0;
+	line = get_next_line(fd);
+	while (line)
+	{
+		data->map[i] = ft_strtrim(line, "\n");
+		free(line);
+		if (!data->map[i])
+		{
+			clear_map(data->map, i);
+			error(NULL, "Error: malloc failed in ft_strtrim");
+		}
+		i++;
+		line = get_next_line(fd);
+	}
+	data->map[i] = NULL;
+	close(fd);
+}
+
+void	read_map(char *name, t_game_data *data)
+{
+	count_height_map(data, name);
+	data->map = malloc(sizeof(char *) * (data->map_h + 1));
+	if (!data->map)
+		error(NULL, "Error: malloc failed for map array");
+	construct_map(data, name);
 }

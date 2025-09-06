@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leonasil <leonasil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leonardo_ouza <leonardo_ouza@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 19:16:38 by leonasil          #+#    #+#             */
-/*   Updated: 2025/04/16 19:21:15 by leonasil         ###   ########.fr       */
+/*   Updated: 2025/09/06 04:31:45 by leonardo_ou      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (size);
 }
-/*
-int main(void)
-{
-    const char *str = "Leo";
-    printf("Tamanho da string: %zu\n", ft_strlen(str));
-    return 0;
-}
-*/

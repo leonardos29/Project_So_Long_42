@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leonasil <leonasil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leonardo_ouza <leonardo_ouza@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 14:25:03 by leonasil          #+#    #+#             */
-/*   Updated: 2025/04/20 15:22:45 by leonasil         ###   ########.fr       */
+/*   Updated: 2025/09/06 04:31:54 by leonardo_ou      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,21 +43,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(new, s1 + start, (end - start) + 1);
 	return (new);
 }
-/*
-int	main(void)
-{
-	char *result;
-
-	printf("Teste 1: s1 = \"---Hello World---\", set = \"-\"\n");
-	result = ft_strtrim("---Hello World---", "-");
-	printf("Resultado: \"%s\"\n\n", result);
-	free(result);
-
-	printf("Teste 2: s1 = \"  \t42SP\t  \", set = \" \\t\"\n");
-	result = ft_strtrim("  \t42SP\t  ", " \t");
-	printf("Resultado: \"%s\"\n\n", result);
-	free(result);
-
-	return (0);
-}
-*/

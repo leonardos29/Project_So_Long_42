@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   put_moves_on_screen.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: leonardo_ouza <leonardo_ouza@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/23 20:09:09 by leonasil          #+#    #+#             */
-/*   Updated: 2025/04/25 04:38:36 by leonardo_ou      ###   ########.fr       */
+/*   Created: 2025/09/06 06:18:40 by leonardo_ou       #+#    #+#             */
+/*   Updated: 2025/09/06 06:29:53 by leonardo_ou      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/so_long.h"
 
-t_list	*ft_lstnew(void *content)
+void	put_moves_on_screen(t_game_data *data)
 {
-	t_list	*new_node;
-
-	new_node = malloc(sizeof(t_list));
-	if (!new_node)
-		return (NULL);
-	new_node -> content = content;
-	new_node -> next = NULL;
-	return (new_node);
+	char	*moves_str;
+	char 	*display_str;
+	
+	moves_str = ft_itoa(data->moves);
+	display_str = ft_strjoin("Moves: ", moves_str)
+	mlx_string_put(data->mlx, data->win, 12, 15, 0xFFFFFF, moves_str);
+	free(moves_str);
 }
-/*
-int	main(void)
-{
-	t_list *node;
-
-	node = ft_lstnew("42 Lisboa");
-	printf("Conteúdo: %s\n", (char *)node->content);
-	free(node);
-	return (0);
-}
-*/

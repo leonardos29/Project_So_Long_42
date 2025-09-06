@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leonasil <leonasil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leonardo_ouza <leonardo_ouza@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 04:29:28 by leonardo_ou       #+#    #+#             */
-/*   Updated: 2025/06/20 14:56:06 by leonasil         ###   ########.fr       */
+/*   Updated: 2025/09/06 06:08:21 by leonardo_ou      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ char	*read_file(int fd, char *stash, char *buff)
 	{
 		rb = read(fd, buff, BUFFER_SIZE);
 		if (rb < 0)
-			{
-				buff[0] = '\0';
-				return (free(stash), NULL);
-			}
+		{
+			buff[0] = '\0';
+			return (free(stash), NULL);
+		}
 		buff[rb] = '\0';
 		tmp = stash;
 		stash = ft_strjoin(stash, buff);
@@ -87,7 +87,7 @@ char	*get_lin(char *stash)
 	char	*line;
 	int		i;
 	int		j;
-	
+
 	i = 0;
 	while (stash[i] && stash[i] != '\n')
 		i++;

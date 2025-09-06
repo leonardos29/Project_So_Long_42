@@ -6,7 +6,7 @@
 /*   By: leonardo_ouza <leonardo_ouza@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 09:32:22 by leonasil          #+#    #+#             */
-/*   Updated: 2025/04/28 01:16:21 by leonardo_ou      ###   ########.fr       */
+/*   Updated: 2025/09/06 04:31:49 by leonardo_ou      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-/*
-int main() {
-    const char *s1 = "Leonardo";
-    const char *s2 = "Leo";
-    printf("%d\n", ft_strncmp(s1, s2, 4));  
-}
-*/
